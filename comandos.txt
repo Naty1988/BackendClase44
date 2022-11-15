@@ -1,0 +1,6 @@
+// Comando en CLI para pasar puerto: node server.js  -p 3000 cluster
+
+// En .env // URL_BASE_DE_DATOS_CONECTARDB="mongodb://localhost:27017/passport"
+
+artillery quick -c 50 -n 40 http://localhost:8080/product > result_cluster.txt
+artillery quick -c 50 -n 40 http://localhost:8080/product > result_fork.txt
